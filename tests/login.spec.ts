@@ -41,7 +41,7 @@ for (const user of successfulLoginUsers) {
     test(`${user.username} can log in successfully`, async ({page}) => {
         await page.goto('/')
         const userLogin = new UserLogin(page)
-        await userLogin.loginValidUser(user.username, user.password)
+        await userLogin.login(user.username, user.password)
         await expect(page).toHaveURL(/inventory.html/)
     })
 }

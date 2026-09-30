@@ -14,7 +14,5 @@ export class UserLogin {
     await this.page.locator('[data-test="login-button"]').click();
   }
 
-  async loginValidUser(username: string, password: string) {
-    await this.login(username, password);
-  }
+
 }
